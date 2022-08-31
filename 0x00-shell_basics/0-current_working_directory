@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $(which ls)
+echo $(realpath “${BASH_SOURCE:-$0}”)

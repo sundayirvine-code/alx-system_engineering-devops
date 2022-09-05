@@ -15,4 +15,10 @@ Hidden directories should be counted
 12. What’s new - Create a script that displays the 10 newest files in the current directory.
 13. Being unique is better than being perfect - 13. Being unique is better than being perfect
 14. It must be in that file - Display lines containing the pattern “root” from the file /etc/passwd
-
+15. Count that word - Display the number of lines that contain the pattern “bin” in the file /etc/passwd
+16. What's next? - Display lines containing the pattern “root” and 3 lines after them in the file /etc/passwd.
+17. I hate bins - Display all the lines in the file /etc/passwd that do not contain the pattern “bin”.
+18. Letters only please - Display all lines of the file /etc/ssh/sshd_config starting with a letter.
+19. A to Z - Replace all characters A and c from input to Z and e respectively.
+20. Without C, you would live in hiago - Create a script that removes all letters c and C from input.
+21. esreveR - Write a script that reverse its input.

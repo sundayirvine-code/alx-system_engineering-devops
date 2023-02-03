@@ -1,5 +1,5 @@
-# Magic pattern for SCHOOL data files
-0 string SCHOOL
+# Magic pattern for School data files
+0 string School
 
 # Explanation of the magic pattern
 >0         # Start at offset 4

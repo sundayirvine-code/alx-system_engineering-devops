@@ -1,2 +1,6 @@
 # Magic pattern for SCHOOL data files
-!:mime School
+0 string SCHOOL
+
+# Explanation of the magic pattern
+>0         # Start at offset 4
+string     # The word "SCHOOL"

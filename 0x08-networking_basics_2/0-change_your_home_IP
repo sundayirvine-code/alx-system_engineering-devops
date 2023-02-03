@@ -1,16 +1,9 @@
 #!/usr/bin/env bash
-#This is a scrip that configures an Ubuntu server
-# Create a backup of the original /etc/hosts file
-cp /etc/hosts /etc/hosts.bak
+# Configures an Ubuntu server as follows:
+#   - localhost resolves to 127.0.0.2
+#   - facebook.com resolves to 8.8.8.8
 
-# Copy the original /etc/hosts file to a new file
-cp /etc/hosts ~/hosts.new
-
-# Use sed to modify the new file
-# - Add a mapping for localhost to resolve to 127.0.0.2
-# - Add a mapping for facebook.com to resolve to 8.8.8.8
-sed -i 's/127.0.0.1\tlocalhost/127.0.0.2\tlocalhost/' ~/hosts.new
-echo "8.8.8.8\tfacebook.com" >> ~/hosts.new
-
-# Replace the original /etc/hosts file with the modified file
-cp -f ~/hosts.new /etc/hosts
+cp /etc/hosts new_hosts
+sed -i s/^127.*/"127.0.0.2 localhost"/ new_hosts
+echo "8.8.8.8 facebook.com" >> new_hosts
+cp new_hosts /etc/hosts

@@ -2,7 +2,7 @@ Host *
   PasswordAuthentication no
 
 Host server
-  HostName 98.98.98.98
+  HostName 100.26.171.74
   User ubuntu
   IdentityFile ~/.ssh/school
 

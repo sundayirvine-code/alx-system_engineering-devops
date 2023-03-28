@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
+# Establish a connection to 54.160.103.207 using Private key in ~/.ssh/school file
 
 ssh -i ~/.ssh/school ubuntu@54.160.103.207

@@ -18,23 +18,20 @@ echo "Hello World!" > /var/www/html/index.html
 touch /var/www/html/custom404.html
 echo "Ceci n'est pas une page" > /var/www/html/custom404.html
 
-server="server {
+printf %s "server {
     listen 80 default_server;
     listen [::]:80 default_server;
     add_header X-Served-By $HOSTNAME;
     root   /var/www/html;
     index  index.html index.htm;
-
     location /redirect_me {
-        return 301 http://youtube.com/;
+        return 301 http://cuberule.com/;
     }
-
-    error_page 404 /custom404.html;
+    error_page 404 /404.html;
     location /404 {
       root /var/www/html;
       internal;
     }
-}"
-sudo echo > /etc/nginx/sites-available/default
+}" > /etc/nginx/sites-available/default
 
 sudo service nginx restart

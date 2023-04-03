@@ -22,8 +22,8 @@ frontend balancer
 
 backend lb-backends
     balance roundrobin
-    server 6366-web-01 44.200.178.81:80 check
-    server 6366-web-02 35.175.65.219:80 check
+    server 115979-web-01 54.160.103.207 check
+    server 115979-web-02 34.202.159.134 check
 "
 cp -a /etc/haproxy/haproxy.cfg{,.orig}
 sudo echo $config >> /etc/haproxy/haproxy.cfg

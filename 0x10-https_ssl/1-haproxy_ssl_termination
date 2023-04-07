@@ -32,7 +32,7 @@ defaults
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
 
-# config for www.airbnbclone.tech fronted and backend load balancing
+# config for www.irvinesunday.tech fronted and backend load balancing
 frontend airbnbclone-front1
         bind    *:80
         default_backend airbnbclone-back
@@ -43,6 +43,6 @@ frontend airbnbclone-front2
 
 backend airbnbclone-back
         balance roundrobin
-        server 6366-web-01 44.200.178.81:80 check
-        server 6366-web-02 35.175.65.219:80 check
+        server 115979-web-01 54.160.103.207:80 check
+        server 115979-web-02 34.202.159.134:80 check
 # End of settings
